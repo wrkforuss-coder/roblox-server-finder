@@ -1,0 +1,12 @@
+{
+  "name": "roblox-server-finder",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Find the lowest-population public Roblox servers. Static frontend + Netlify Function.",
+  "scripts": {
+    "dev": "netlify dev",
+    "deploy": "netlify deploy --prod"
+  },
+  "engines": { "node": ">=18" },
+  "devDependencies": { "netlify-cli": "^17.0.0" }
+}

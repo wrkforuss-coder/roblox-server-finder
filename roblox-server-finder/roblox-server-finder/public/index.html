@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roblox Server Finder</title>
+<meta name="description" content="Find the lowest-population public Roblox servers.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Roblox Server Finder</h1>
+  <p class="sub">Find the lowest-population public servers.</p>
+
+  <form id="form" autocomplete="off">
+    <input id="input" type="text" inputmode="url" placeholder="Paste Roblox Game URL or Place ID" aria-label="Roblox game URL or Place ID">
+    <button id="find" type="submit">FIND SERVERS</button>
+  </form>
+  <div id="error" class="error" hidden role="alert"></div>
+
+  <section id="game" class="game" hidden></section>
+
+  <section id="controls" class="controls" hidden>
+    <label>Min <input id="min" type="number" min="0" value="0"></label>
+    <label>Max <input id="max" type="number" min="0" placeholder="any"></label>
+    <label>Pages to scan
+      <select id="pages"><option>1</option><option>3</option><option selected>5</option><option>10</option></select>
+    </label>
+    <label>Auto refresh
+      <select id="auto"><option value="0">OFF</option><option value="15">15 sec</option><option value="30">30 sec</option><option value="60">60 sec</option></select>
+    </label>
+    <label class="check"><input id="space" type="checkbox" checked> Only show servers with space</label>
+    <button id="refresh" type="button">Refresh Servers</button>
+  </section>
+
+  <section id="results" hidden>
+    <h2>Lowest Player Servers</h2>
+    <p id="stats" class="stats"></p>
+    <p id="updated" class="stats"></p>
+    <div id="note" class="note" hidden></div>
+    <div id="list" class="list"></div>
+  </section>
+
+  <footer>
+    <p>No Roblox login needed. This site never asks for your password or cookies. Join links open Roblox's own site/app.</p>
+    <p>Not affiliated with Roblox Corporation.</p>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
